@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/quang/Projects/SIP/build-SIP-Desktop-Debug/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
