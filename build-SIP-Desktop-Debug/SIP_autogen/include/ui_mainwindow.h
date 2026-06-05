@@ -23,7 +23,6 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QPushButton *btnRegister;
     QPushButton *btnCall;
     QPushButton *btnHangup;
     QMenuBar *menubar;
@@ -36,9 +35,6 @@ public:
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        btnRegister = new QPushButton(centralwidget);
-        btnRegister->setObjectName("btnRegister");
-        btnRegister->setGeometry(QRect(90, 110, 89, 25));
         btnCall = new QPushButton(centralwidget);
         btnCall->setObjectName("btnCall");
         btnCall->setGeometry(QRect(220, 120, 89, 25));
@@ -62,7 +58,6 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        btnRegister->setText(QCoreApplication::translate("MainWindow", "\304\220\304\203ng k\303\275", nullptr));
         btnCall->setText(QCoreApplication::translate("MainWindow", "G\341\273\215i \304\221i", nullptr));
         btnHangup->setText(QCoreApplication::translate("MainWindow", "D\341\272\255p m\303\241y", nullptr));
     } // retranslateUi
