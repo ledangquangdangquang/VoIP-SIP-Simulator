@@ -13,7 +13,9 @@ sudo nano /etc/asterisk/pjsip.conf
 **1. Import `.ova` file into Virtualbox**
 [Download .ova here](google.com)
 password: 102112
+
 **2. Open Qt -> Open project -> `~/Projects/SIP_addServer` -> Select `CMakeLists.txt`**
+
 **3. Replace your ip  `mainwindow.cpp` file**
 - To show your ip 
 ```
@@ -24,6 +26,7 @@ hostname -I
 ### Other device (Android, Window, Linux, ...)
 **1. Download Linphone**
 https://www.linphone.org/en/download/
+
 **2. Select third party**
 Setup info user 2:
 ```
