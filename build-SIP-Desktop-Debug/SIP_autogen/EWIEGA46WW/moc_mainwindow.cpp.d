@@ -1,4 +1,4 @@
-/home/quang/Projects/SIP/build-SIP-Desktop-Debug/SIP_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/quang/Projects/SIP/mainwindow.h \
+/home/quang/Projects/SIP/build-SIP-Desktop-Debug/SIP_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/quang/Projects/SIP_addServer/mainwindow.h \
   /home/quang/Projects/SIP/build-SIP-Desktop-Debug/SIP_autogen/moc_predefs.h \
   /home/quang/qt6/host/include/QtCore/QDebug \
   /home/quang/qt6/host/include/QtCore/q20memory.h \

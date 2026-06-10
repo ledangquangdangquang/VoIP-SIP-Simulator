@@ -1,4 +1,4 @@
-# Install script for directory: /home/quang/Projects/SIP
+# Install script for directory: /home/quang/Projects/SIP_addServer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

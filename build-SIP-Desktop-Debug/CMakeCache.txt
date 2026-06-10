@@ -343,52 +343,13 @@ SIP_BINARY_DIR:STATIC=/home/quang/Projects/SIP/build-SIP-Desktop-Debug
 SIP_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-SIP_SOURCE_DIR:STATIC=/home/quang/Projects/SIP
+SIP_SOURCE_DIR:STATIC=/home/quang/Projects/SIP_addServer
 
 //Path to a file.
 XKB_INCLUDE_DIR:PATH=/usr/include
 
 //Path to a library.
 XKB_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libxkbcommon.so
-
-//Path to a library.
-pkgcfg_lib_PJSIP_pj:FILEPATH=/usr/local/lib/libpj.so
-
-//Path to a library.
-pkgcfg_lib_PJSIP_pjlib-util:FILEPATH=/usr/local/lib/libpjlib-util.so
-
-//Path to a library.
-pkgcfg_lib_PJSIP_pjmedia:FILEPATH=/usr/local/lib/libpjmedia.so
-
-//Path to a library.
-pkgcfg_lib_PJSIP_pjmedia-audiodev:FILEPATH=/usr/local/lib/libpjmedia-audiodev.so
-
-//Path to a library.
-pkgcfg_lib_PJSIP_pjmedia-codec:FILEPATH=/usr/local/lib/libpjmedia-codec.so
-
-//Path to a library.
-pkgcfg_lib_PJSIP_pjmedia-videodev:FILEPATH=/usr/local/lib/libpjmedia-videodev.so
-
-//Path to a library.
-pkgcfg_lib_PJSIP_pjnath:FILEPATH=/usr/local/lib/libpjnath.so
-
-//Path to a library.
-pkgcfg_lib_PJSIP_pjsip:FILEPATH=/usr/local/lib/libpjsip.so
-
-//Path to a library.
-pkgcfg_lib_PJSIP_pjsip-simple:FILEPATH=/usr/local/lib/libpjsip-simple.so
-
-//Path to a library.
-pkgcfg_lib_PJSIP_pjsip-ua:FILEPATH=/usr/local/lib/libpjsip-ua.so
-
-//Path to a library.
-pkgcfg_lib_PJSIP_pjsua:FILEPATH=/usr/local/lib/libpjsua.so
-
-//Path to a library.
-pkgcfg_lib_PJSIP_pjsua2:FILEPATH=/usr/local/lib/libpjsua2.so
-
-//Path to a library.
-pkgcfg_lib_PJSIP_stdc++:FILEPATH=pkgcfg_lib_PJSIP_stdc++-NOTFOUND
 
 //Path to a library.
 pkgcfg_lib_PKG_EGL_EGL:FILEPATH=/usr/lib/x86_64-linux-gnu/libEGL.so
@@ -463,7 +424,7 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/quang/Projects/SIP
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/quang/Projects/SIP_addServer
 //ADVANCED property for variable: CMAKE_INSTALL_BINDIR
 CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_INSTALL_DATADIR
@@ -570,8 +531,6 @@ EGL_LIBRARY-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_EGL:INTERNAL=[/usr/include][1][/usr/lib/x86_64-linux-gnu/libEGL.so][v1.5()]
 //Details about finding GLESv2
 FIND_PACKAGE_MESSAGE_DETAILS_GLESv2:INTERNAL=[/usr/include][/usr/lib/x86_64-linux-gnu/libGLESv2.so][1][1][v()]
-//Details about finding PkgConfig
-FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.2()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding WrapAtomic
@@ -592,41 +551,6 @@ HAVE_GLESv2-ADVANCED:INTERNAL=1
 HAVE_GLESv2:INTERNAL=1
 //Test HAVE_STDATOMIC
 HAVE_STDATOMIC:INTERNAL=1
-PJSIP_CFLAGS:INTERNAL=-DPJ_AUTOCONF=1;-DPJ_IS_BIG_ENDIAN=0;-DPJ_IS_LITTLE_ENDIAN=1;-I/usr/local/include
-PJSIP_CFLAGS_I:INTERNAL=
-PJSIP_CFLAGS_OTHER:INTERNAL=-DPJ_AUTOCONF=1;-DPJ_IS_BIG_ENDIAN=0;-DPJ_IS_LITTLE_ENDIAN=1
-PJSIP_FOUND:INTERNAL=1
-PJSIP_INCLUDEDIR:INTERNAL=/usr/local/include
-PJSIP_INCLUDE_DIRS:INTERNAL=/usr/local/include
-PJSIP_LDFLAGS:INTERNAL=-L/usr/local/lib;-lpjsua2;-lstdc++;-lpjsua;-lpjsip-ua;-lpjsip-simple;-lpjsip;-lpjmedia-codec;-lpjmedia-videodev;-lpjmedia-audiodev;-lpjmedia;-lpjnath;-lpjlib-util;-lpj
-PJSIP_LDFLAGS_OTHER:INTERNAL=
-PJSIP_LIBDIR:INTERNAL=/usr/local/lib
-PJSIP_LIBRARIES:INTERNAL=pjsua2;stdc++;pjsua;pjsip-ua;pjsip-simple;pjsip;pjmedia-codec;pjmedia-videodev;pjmedia-audiodev;pjmedia;pjnath;pjlib-util;pj
-PJSIP_LIBRARY_DIRS:INTERNAL=/usr/local/lib
-PJSIP_LIBS:INTERNAL=
-PJSIP_LIBS_L:INTERNAL=
-PJSIP_LIBS_OTHER:INTERNAL=
-PJSIP_LIBS_PATHS:INTERNAL=
-PJSIP_MODULE_NAME:INTERNAL=libpjproject
-PJSIP_PREFIX:INTERNAL=/usr/local
-PJSIP_STATIC_CFLAGS:INTERNAL=-DPJ_AUTOCONF=1;-DPJ_IS_BIG_ENDIAN=0;-DPJ_IS_LITTLE_ENDIAN=1;-I/usr/local/include
-PJSIP_STATIC_CFLAGS_I:INTERNAL=
-PJSIP_STATIC_CFLAGS_OTHER:INTERNAL=-DPJ_AUTOCONF=1;-DPJ_IS_BIG_ENDIAN=0;-DPJ_IS_LITTLE_ENDIAN=1
-PJSIP_STATIC_INCLUDE_DIRS:INTERNAL=/usr/local/include
-PJSIP_STATIC_LDFLAGS:INTERNAL=-L/usr/local/lib;-lpjsua2;-lstdc++;-lpjsua;-lpjsip-ua;-lpjsip-simple;-lpjsip;-lpjmedia-codec;-lpjmedia-videodev;-lpjmedia-audiodev;-lpjmedia;-lpjnath;-lpjlib-util;-lpj;-lsrtp;-lresample;-lgsmcodec;-lspeex;-lilbccodec;-lg7221codec;-lyuv;-lwebrtc;-lssl;-lcrypto;-luuid;-lm;-lrt;-lpthread;-lasound
-PJSIP_STATIC_LDFLAGS_OTHER:INTERNAL=
-PJSIP_STATIC_LIBDIR:INTERNAL=
-PJSIP_STATIC_LIBRARIES:INTERNAL=pjsua2;stdc++;pjsua;pjsip-ua;pjsip-simple;pjsip;pjmedia-codec;pjmedia-videodev;pjmedia-audiodev;pjmedia;pjnath;pjlib-util;pj;srtp;resample;gsmcodec;speex;ilbccodec;g7221codec;yuv;webrtc;ssl;crypto;uuid;m;rt;pthread;asound
-PJSIP_STATIC_LIBRARY_DIRS:INTERNAL=/usr/local/lib
-PJSIP_STATIC_LIBS:INTERNAL=
-PJSIP_STATIC_LIBS_L:INTERNAL=
-PJSIP_STATIC_LIBS_OTHER:INTERNAL=
-PJSIP_STATIC_LIBS_PATHS:INTERNAL=
-PJSIP_VERSION:INTERNAL=2.17-dev
-PJSIP_libpjproject_INCLUDEDIR:INTERNAL=
-PJSIP_libpjproject_LIBDIR:INTERNAL=
-PJSIP_libpjproject_PREFIX:INTERNAL=
-PJSIP_libpjproject_VERSION:INTERNAL=
 //ADVANCED property for variable: PKG_CONFIG_ARGN
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
@@ -1485,41 +1409,13 @@ QT_FEATURE_xrender:INTERNAL=OFF
 QT_FEATURE_zstd:INTERNAL=OFF
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
-__pkg_config_arguments_PJSIP:INTERNAL=REQUIRED;libpjproject
 __pkg_config_arguments_PKG_EGL:INTERNAL=QUIET;egl
 __pkg_config_arguments_PKG_XKB:INTERNAL=QUIET;xkbcommon
-__pkg_config_checked_PJSIP:INTERNAL=1
 __pkg_config_checked_PKG_EGL:INTERNAL=1
 __pkg_config_checked_PKG_XKB:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PJSIP_pj
-pkgcfg_lib_PJSIP_pj-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PJSIP_pjlib-util
-pkgcfg_lib_PJSIP_pjlib-util-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PJSIP_pjmedia
-pkgcfg_lib_PJSIP_pjmedia-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PJSIP_pjmedia-audiodev
-pkgcfg_lib_PJSIP_pjmedia-audiodev-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PJSIP_pjmedia-codec
-pkgcfg_lib_PJSIP_pjmedia-codec-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PJSIP_pjmedia-videodev
-pkgcfg_lib_PJSIP_pjmedia-videodev-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PJSIP_pjnath
-pkgcfg_lib_PJSIP_pjnath-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PJSIP_pjsip
-pkgcfg_lib_PJSIP_pjsip-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PJSIP_pjsip-simple
-pkgcfg_lib_PJSIP_pjsip-simple-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PJSIP_pjsip-ua
-pkgcfg_lib_PJSIP_pjsip-ua-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PJSIP_pjsua
-pkgcfg_lib_PJSIP_pjsua-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PJSIP_pjsua2
-pkgcfg_lib_PJSIP_pjsua2-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PJSIP_stdc++
-pkgcfg_lib_PJSIP_stdc++-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_PKG_EGL_EGL
 pkgcfg_lib_PKG_EGL_EGL-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_PKG_XKB_xkbcommon
 pkgcfg_lib_PKG_XKB_xkbcommon-ADVANCED:INTERNAL=1
-prefix_result:INTERNAL=/usr/local/lib
+prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 

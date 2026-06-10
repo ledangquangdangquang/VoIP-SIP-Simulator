@@ -60,7 +60,7 @@ events:
       - "/usr/local/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:212 (message)"
       - "CMakeLists.txt:3 (project)"
     message: |
-      The system is: Linux - 6.8.0-117-generic - x86_64
+      The system is: Linux - 6.8.0-124-generic - x86_64
   -
     kind: "find-v1"
     backtrace:
@@ -817,20 +817,21 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-j5QK9V"
-      binary: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-j5QK9V"
+      source: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-gdLQof"
+      binary: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-gdLQof"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
       CMAKE_EXE_LINKER_FLAGS: ""
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-j5QK9V'
+        Change Dir: '/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-gdLQof'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_781ab
-        [1/2] /usr/bin/g++   -DQT_QML_DEBUG    -v -o CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/ninja -v cmTC_c778a
+        [1/2] /usr/bin/g++   -DQT_QML_DEBUG    -v -o CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/g++
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -840,8 +841,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04.3) 
-        COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_781ab.dir/'
-         /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE -D QT_QML_DEBUG /usr/local/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_781ab.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccG5oixr.s
+        COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c778a.dir/'
+         /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE -D QT_QML_DEBUG /usr/local/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_c778a.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccEVBOH7.s
         GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04.3) version 11.4.0 (x86_64-linux-gnu)
         	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
         
@@ -865,13 +866,13 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: ac7fa628ee459f217e6fdb88b3db0bde
-        COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_781ab.dir/'
-         as -v --64 -o CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccG5oixr.s
+        COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c778a.dir/'
+         as -v --64 -o CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccEVBOH7.s
         GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38
         COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] : && /usr/bin/g++ -DQT_QML_DEBUG -v -Wl,-v CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_781ab   && :
+        COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /usr/bin/g++ -DQT_QML_DEBUG -v -Wl,-v CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_c778a   && :
         Using built-in specs.
         COLLECT_GCC=/usr/bin/g++
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
@@ -884,12 +885,12 @@ events:
         gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04.3) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'cmTC_781ab' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_781ab.'
-         /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccfNZ3hQ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_781ab /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'cmTC_c778a' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c778a.'
+         /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccIX2vHL.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_c778a /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
         collect2 version 11.4.0
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccfNZ3hQ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_781ab /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccIX2vHL.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_c778a /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
         GNU ld (GNU Binutils for Ubuntu) 2.38
-        COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'cmTC_781ab' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_781ab.'
+        COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'cmTC_c778a' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c778a.'
         
       exitCode: 0
   -
@@ -930,10 +931,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-j5QK9V']
+        ignore line: [Change Dir: '/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-gdLQof']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_781ab]
-        ignore line: [[1/2] /usr/bin/g++   -DQT_QML_DEBUG    -v -o CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_c778a]
+        ignore line: [[1/2] /usr/bin/g++   -DQT_QML_DEBUG    -v -o CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/g++]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -943,8 +944,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04.3) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_781ab.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE -D QT_QML_DEBUG /usr/local/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_781ab.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccG5oixr.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c778a.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE -D QT_QML_DEBUG /usr/local/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_c778a.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccEVBOH7.s]
         ignore line: [GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04.3) version 11.4.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
         ignore line: []
@@ -968,13 +969,13 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: ac7fa628ee459f217e6fdb88b3db0bde]
-        ignore line: [COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_781ab.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccG5oixr.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c778a.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccEVBOH7.s]
         ignore line: [GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] : && /usr/bin/g++ -DQT_QML_DEBUG -v -Wl -v CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_781ab   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /usr/bin/g++ -DQT_QML_DEBUG -v -Wl -v CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_c778a   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/g++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper]
@@ -987,13 +988,13 @@ events:
         ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04.3) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'cmTC_781ab' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_781ab.']
-        link line: [ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccfNZ3hQ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_781ab /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-D' 'QT_QML_DEBUG' '-v' '-o' 'cmTC_c778a' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c778a.']
+        link line: [ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccIX2vHL.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_c778a /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccfNZ3hQ.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccIX2vHL.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -1011,7 +1012,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_781ab] ==> ignore
+          arg [cmTC_c778a] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o]
@@ -1024,7 +1025,7 @@ events:
           arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
           arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -1035,7 +1036,7 @@ events:
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
         ignore line: [collect2 version 11.4.0]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccfNZ3hQ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_781ab /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_781ab.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccIX2vHL.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_c778a /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. -v CMakeFiles/cmTC_c778a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
         linker tool for 'CXX': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
@@ -1075,12 +1076,12 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Dependencies.cmake:24 (_qt_internal_find_third_party_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:112 (include)"
-      - "CMakeLists.txt:12 (find_package)"
+      - "CMakeLists.txt:14 (find_package)"
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-WLqQoB"
-      binary: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-WLqQoB"
+      source: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-a5Qj4g"
+      binary: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-a5Qj4g"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1090,21 +1091,25 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-WLqQoB'
+        Change Dir: '/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-a5Qj4g'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_1d286
-        [1/2] /usr/bin/g++ -DCMAKE_HAVE_LIBC_PTHREAD  -DQT_QML_DEBUG  -std=gnu++17 -o CMakeFiles/cmTC_1d286.dir/src.cxx.o -c /home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-WLqQoB/src.cxx
-        [2/2] : && /usr/bin/g++ -DQT_QML_DEBUG  CMakeFiles/cmTC_1d286.dir/src.cxx.o -o cmTC_1d286   && :
+        Run Build Command(s): /usr/bin/ninja -v cmTC_31739
+        [1/2] /usr/bin/g++ -DCMAKE_HAVE_LIBC_PTHREAD  -DQT_QML_DEBUG  -std=gnu++17 -o CMakeFiles/cmTC_31739.dir/src.cxx.o -c /home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-a5Qj4g/src.cxx
+        [2/2] : && /usr/bin/g++ -DQT_QML_DEBUG  CMakeFiles/cmTC_31739.dir/src.cxx.o -o cmTC_31739   && :
         
       exitCode: 0
   -
     kind: "find_package-v1"
     backtrace:
-      - "CMakeLists.txt:12 (find_package)"
+      - "CMakeLists.txt:14 (find_package)"
     name: "QT"
     components:
       -
         name: "Widgets"
+        required: true
+        found: false
+      -
+        name: "Network"
         required: true
         found: false
     configs:
@@ -2366,7 +2371,7 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:34 (_qt_internal_find_tool_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     name: "Qt6CoreTools"
     configs:
       -
@@ -2461,7 +2466,7 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:34 (_qt_internal_find_tool_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     name: "Qt6GuiTools"
     configs:
       -
@@ -2553,7 +2558,7 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:34 (_qt_internal_find_tool_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     name: "Qt6WidgetsTools"
     configs:
       -
@@ -2649,12 +2654,12 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-3oGwrI"
-      binary: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-3oGwrI"
+      source: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-uDyYED"
+      binary: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-uDyYED"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -2664,11 +2669,11 @@ events:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: '/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-3oGwrI'
+        Change Dir: '/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-uDyYED'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_11399
-        [1/2] /usr/bin/g++ -DHAVE_STDATOMIC  -DQT_QML_DEBUG  -std=gnu++17 -o CMakeFiles/cmTC_11399.dir/src.cxx.o -c /home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-3oGwrI/src.cxx
-        [2/2] : && /usr/bin/g++ -DQT_QML_DEBUG  CMakeFiles/cmTC_11399.dir/src.cxx.o -o cmTC_11399   && :
+        Run Build Command(s): /usr/bin/ninja -v cmTC_db3e1
+        [1/2] /usr/bin/g++ -DHAVE_STDATOMIC  -DQT_QML_DEBUG  -std=gnu++17 -o CMakeFiles/cmTC_db3e1.dir/src.cxx.o -c /home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-uDyYED/src.cxx
+        [2/2] : && /usr/bin/g++ -DQT_QML_DEBUG  CMakeFiles/cmTC_db3e1.dir/src.cxx.o -o cmTC_db3e1   && :
         
       exitCode: 0
   -
@@ -2679,7 +2684,7 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     name: "Qt6Core"
     configs:
       -
@@ -2781,7 +2786,7 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     mode: "library"
     variable: "GLESv2_LIBRARY"
     description: "Path to a library."
@@ -2883,7 +2888,7 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     mode: "path"
     variable: "GLESv2_INCLUDE_DIR"
     description: "The OpenGLES 2 include path"
@@ -2988,7 +2993,7 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     mode: "program"
     variable: "PKG_CONFIG_EXECUTABLE"
     description: "pkg-config executable"
@@ -3089,7 +3094,7 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     mode: "library"
     variable: "pkgcfg_lib_PKG_EGL_EGL"
     description: "Path to a library."
@@ -3146,7 +3151,7 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     mode: "path"
     variable: "EGL_INCLUDE_DIR"
     description: "Path to a file."
@@ -3237,7 +3242,7 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     mode: "library"
     variable: "EGL_LIBRARY"
     description: "Path to a library."
@@ -3330,12 +3335,12 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     checks:
       - "Performing Test HAVE_EGL"
     directories:
-      source: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-RlGA6Q"
-      binary: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-RlGA6Q"
+      source: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-4YPzd0"
+      binary: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-4YPzd0"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -3345,11 +3350,11 @@ events:
       variable: "HAVE_EGL"
       cached: true
       stdout: |
-        Change Dir: '/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-RlGA6Q'
+        Change Dir: '/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-4YPzd0'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_63b61
-        [1/2] /usr/bin/g++ -DHAVE_EGL  -DQT_QML_DEBUG  -std=gnu++17 -o CMakeFiles/cmTC_63b61.dir/src.cxx.o -c /home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-RlGA6Q/src.cxx
-        [2/2] : && /usr/bin/g++ -DQT_QML_DEBUG  CMakeFiles/cmTC_63b61.dir/src.cxx.o -o cmTC_63b61  /usr/lib/x86_64-linux-gnu/libEGL.so && :
+        Run Build Command(s): /usr/bin/ninja -v cmTC_c39aa
+        [1/2] /usr/bin/g++ -DHAVE_EGL  -DQT_QML_DEBUG  -std=gnu++17 -o CMakeFiles/cmTC_c39aa.dir/src.cxx.o -c /home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-4YPzd0/src.cxx
+        [2/2] : && /usr/bin/g++ -DQT_QML_DEBUG  CMakeFiles/cmTC_c39aa.dir/src.cxx.o -o cmTC_c39aa  /usr/lib/x86_64-linux-gnu/libEGL.so && :
         
       exitCode: 0
   -
@@ -3367,12 +3372,12 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     checks:
       - "Performing Test HAVE_GLESv2"
     directories:
-      source: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-XVPm61"
-      binary: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-XVPm61"
+      source: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-7SuyN0"
+      binary: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-7SuyN0"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -3382,11 +3387,11 @@ events:
       variable: "HAVE_GLESv2"
       cached: true
       stdout: |
-        Change Dir: '/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-XVPm61'
+        Change Dir: '/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-7SuyN0'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_b3ca6
-        [1/2] /usr/bin/g++ -DHAVE_GLESv2  -DQT_QML_DEBUG  -std=gnu++17 -o CMakeFiles/cmTC_b3ca6.dir/src.cxx.o -c /home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-XVPm61/src.cxx
-        [2/2] : && /usr/bin/g++ -DQT_QML_DEBUG  CMakeFiles/cmTC_b3ca6.dir/src.cxx.o -o cmTC_b3ca6  /usr/lib/x86_64-linux-gnu/libGLESv2.so  /usr/lib/x86_64-linux-gnu/libEGL.so && :
+        Run Build Command(s): /usr/bin/ninja -v cmTC_f6290
+        [1/2] /usr/bin/g++ -DHAVE_GLESv2  -DQT_QML_DEBUG  -std=gnu++17 -o CMakeFiles/cmTC_f6290.dir/src.cxx.o -c /home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/CMakeScratch/TryCompile-7SuyN0/src.cxx
+        [2/2] : && /usr/bin/g++ -DQT_QML_DEBUG  CMakeFiles/cmTC_f6290.dir/src.cxx.o -o cmTC_f6290  /usr/lib/x86_64-linux-gnu/libGLESv2.so  /usr/lib/x86_64-linux-gnu/libEGL.so && :
         
       exitCode: 0
   -
@@ -3405,7 +3410,7 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     mode: "library"
     variable: "pkgcfg_lib_PKG_XKB_xkbcommon"
     description: "Path to a library."
@@ -3460,7 +3465,7 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     mode: "path"
     variable: "XKB_INCLUDE_DIR"
     description: "Path to a file."
@@ -3549,7 +3554,7 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     mode: "library"
     variable: "XKB_LIBRARY"
     description: "Path to a library."
@@ -3641,7 +3646,7 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     name: "Qt6DBusTools"
     configs:
       -
@@ -3734,7 +3739,7 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     name: "Qt6DBus"
     configs:
       -
@@ -3831,7 +3836,7 @@ events:
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
       - "/home/quang/qt6/host/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     name: "Qt6Gui"
     configs:
       -
@@ -3924,7 +3929,7 @@ events:
     kind: "find_package-v1"
     backtrace:
       - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:13 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
     name: "Qt6Widgets"
     configs:
       -
@@ -4013,11 +4018,97 @@ events:
   -
     kind: "find_package-v1"
     backtrace:
-      - "CMakeLists.txt:13 (find_package)"
+      - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
+    name: "Qt6Network"
+    configs:
+      -
+        filename: "Qt6NetworkConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6network-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6Network"
+      search_paths:
+        - "/home/quang/qt6/host/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: false
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/pkgRedirects/Qt6NetworkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/pkgRedirects/qt6network-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/quang/qt6/host/lib/cmake/Qt6NetworkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/quang/qt6/host/lib/cmake/qt6network-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/home/quang/qt6/host/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake"
+      mode: "config"
+      version: "6.5.1"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/quang/qt6/host"
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr/local"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:15 (find_package)"
     name: "Qt6"
     components:
       -
         name: "Widgets"
+        required: true
+        found: false
+      -
+        name: "Network"
         required: true
         found: false
     configs:
@@ -4677,746 +4768,4 @@ events:
         - "/home/quang/qt6/host/lib/cmake/Qt6"
         - "/home/quang/qt6/host/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules"
         - "/home/quang/qt6/host/lib/cmake/Qt6/3rdparty/kwin"
-...
-
----
-events:
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
-      - "CMakeLists.txt:45 (pkg_check_modules)"
-    mode: "library"
-    variable: "pkgcfg_lib_PJSIP_pjsua2"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "pjsua2"
-    candidate_directories:
-      - "/usr/local/lib/"
-    found: "/usr/local/lib/libpjsua2.so"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/home/quang/qt6/host"
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/snap/bin"
-        - "/snap/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
-      - "CMakeLists.txt:45 (pkg_check_modules)"
-    mode: "library"
-    variable: "pkgcfg_lib_PJSIP_stdc++"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "stdc++"
-    candidate_directories:
-      - "/usr/local/lib/"
-    searched_directories:
-      - "/usr/local/lib/"
-    found: false
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/home/quang/qt6/host"
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/snap/bin"
-        - "/snap/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
-      - "CMakeLists.txt:45 (pkg_check_modules)"
-    mode: "library"
-    variable: "pkgcfg_lib_PJSIP_pjsua"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "pjsua"
-    candidate_directories:
-      - "/usr/local/lib/"
-    found: "/usr/local/lib/libpjsua.so"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/home/quang/qt6/host"
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/snap/bin"
-        - "/snap/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
-      - "CMakeLists.txt:45 (pkg_check_modules)"
-    mode: "library"
-    variable: "pkgcfg_lib_PJSIP_pjsip-ua"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "pjsip-ua"
-    candidate_directories:
-      - "/usr/local/lib/"
-    found: "/usr/local/lib/libpjsip-ua.so"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/home/quang/qt6/host"
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/snap/bin"
-        - "/snap/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
-      - "CMakeLists.txt:45 (pkg_check_modules)"
-    mode: "library"
-    variable: "pkgcfg_lib_PJSIP_pjsip-simple"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "pjsip-simple"
-    candidate_directories:
-      - "/usr/local/lib/"
-    found: "/usr/local/lib/libpjsip-simple.so"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/home/quang/qt6/host"
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/snap/bin"
-        - "/snap/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
-      - "CMakeLists.txt:45 (pkg_check_modules)"
-    mode: "library"
-    variable: "pkgcfg_lib_PJSIP_pjsip"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "pjsip"
-    candidate_directories:
-      - "/usr/local/lib/"
-    found: "/usr/local/lib/libpjsip.so"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/home/quang/qt6/host"
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/snap/bin"
-        - "/snap/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
-      - "CMakeLists.txt:45 (pkg_check_modules)"
-    mode: "library"
-    variable: "pkgcfg_lib_PJSIP_pjmedia-codec"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "pjmedia-codec"
-    candidate_directories:
-      - "/usr/local/lib/"
-    found: "/usr/local/lib/libpjmedia-codec.so"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/home/quang/qt6/host"
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/snap/bin"
-        - "/snap/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
-      - "CMakeLists.txt:45 (pkg_check_modules)"
-    mode: "library"
-    variable: "pkgcfg_lib_PJSIP_pjmedia-videodev"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "pjmedia-videodev"
-    candidate_directories:
-      - "/usr/local/lib/"
-    found: "/usr/local/lib/libpjmedia-videodev.so"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/home/quang/qt6/host"
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/snap/bin"
-        - "/snap/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
-      - "CMakeLists.txt:45 (pkg_check_modules)"
-    mode: "library"
-    variable: "pkgcfg_lib_PJSIP_pjmedia-audiodev"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "pjmedia-audiodev"
-    candidate_directories:
-      - "/usr/local/lib/"
-    found: "/usr/local/lib/libpjmedia-audiodev.so"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/home/quang/qt6/host"
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/snap/bin"
-        - "/snap/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
-      - "CMakeLists.txt:45 (pkg_check_modules)"
-    mode: "library"
-    variable: "pkgcfg_lib_PJSIP_pjmedia"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "pjmedia"
-    candidate_directories:
-      - "/usr/local/lib/"
-    found: "/usr/local/lib/libpjmedia.so"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/home/quang/qt6/host"
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/snap/bin"
-        - "/snap/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
-      - "CMakeLists.txt:45 (pkg_check_modules)"
-    mode: "library"
-    variable: "pkgcfg_lib_PJSIP_pjnath"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "pjnath"
-    candidate_directories:
-      - "/usr/local/lib/"
-    found: "/usr/local/lib/libpjnath.so"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/home/quang/qt6/host"
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/snap/bin"
-        - "/snap/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
-      - "CMakeLists.txt:45 (pkg_check_modules)"
-    mode: "library"
-    variable: "pkgcfg_lib_PJSIP_pjlib-util"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "pjlib-util"
-    candidate_directories:
-      - "/usr/local/lib/"
-    found: "/usr/local/lib/libpjlib-util.so"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/home/quang/qt6/host"
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/snap/bin"
-        - "/snap/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:307 (find_library)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:357 (_pkg_find_libs)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
-      - "/usr/local/share/cmake-4.1/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
-      - "CMakeLists.txt:45 (pkg_check_modules)"
-    mode: "library"
-    variable: "pkgcfg_lib_PJSIP_pj"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "pj"
-    candidate_directories:
-      - "/usr/local/lib/"
-    found: "/usr/local/lib/libpj.so"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/home/quang/qt6/host"
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/snap/bin"
-        - "/snap/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-...
-
----
-events:
-  -
-    kind: "find_package-v1"
-    backtrace:
-      - "/home/quang/qt6/host/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
-      - "CMakeLists.txt:15 (find_package)"
-    name: "Qt6Network"
-    configs:
-      -
-        filename: "Qt6NetworkConfig.cmake"
-        kind: "cmake"
-      -
-        filename: "qt6network-config.cmake"
-        kind: "cmake"
-    version_request:
-      exact: false
-    settings:
-      required: "optional"
-      quiet: false
-      global: false
-      policy_scope: true
-      bypass_provider: false
-      names:
-        - "Qt6Network"
-      search_paths:
-        - "/home/quang/qt6/host/lib/cmake"
-      path_suffixes:
-        - ""
-      paths:
-        CMAKE_FIND_USE_CMAKE_PATH: false
-        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-        CMAKE_FIND_USE_INSTALL_PREFIX: true
-        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
-        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
-        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
-        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
-    candidates:
-      -
-        path: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/pkgRedirects/Qt6NetworkConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/pkgRedirects/qt6network-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/quang/qt6/host/lib/cmake/Qt6NetworkConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/home/quang/qt6/host/lib/cmake/qt6network-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-    found:
-      path: "/home/quang/qt6/host/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake"
-      mode: "config"
-      version: "6.5.1"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/home/quang/qt6/host"
-      ENV{PATH}:
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/snap/bin"
-        - "/snap/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
 ...

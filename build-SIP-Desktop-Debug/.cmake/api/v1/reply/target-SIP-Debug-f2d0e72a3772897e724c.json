@@ -71,7 +71,7 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 76,
+				"line" : 75,
 				"parent" : 0
 			},
 			{
@@ -412,11 +412,6 @@
 			},
 			{
 				"backtrace" : 7,
-				"fragment" : "-lpjsdp",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 7,
 				"fragment" : "-lpj",
 				"role" : "libraries"
 			},
@@ -511,7 +506,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build-SIP-Desktop-Debug/SIP_autogen/mocs_compilation.cpp",
+			"path" : "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/SIP_autogen/mocs_compilation.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -539,19 +534,19 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build-SIP-Desktop-Debug/SIP_autogen/include/ui_mainwindow.h",
+			"path" : "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/SIP_autogen/include/ui_mainwindow.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build-SIP-Desktop-Debug/SIP_autogen/timestamp",
+			"path" : "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/SIP_autogen/timestamp",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build-SIP-Desktop-Debug/SIP_autogen/timestamp.rule",
+			"path" : "/home/quang/Projects/SIP/build-SIP-Desktop-Debug/SIP_autogen/timestamp.rule",
 			"sourceGroupIndex" : 3
 		}
 	],

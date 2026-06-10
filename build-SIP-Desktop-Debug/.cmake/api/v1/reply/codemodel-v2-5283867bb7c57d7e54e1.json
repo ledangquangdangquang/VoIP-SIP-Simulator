@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-2e373b9224aca155e22d.json",
+					"jsonFile" : "directory-.-Debug-39fbe0b9695259cef8f3.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,14 +44,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "SIP::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SIP-Debug-1bf9c94a0e9a5abf73be.json",
+					"jsonFile" : "target-SIP-Debug-f2d0e72a3772897e724c.json",
 					"name" : "SIP",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "SIP_autogen::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SIP_autogen-Debug-1eca669a58ffb4656b59.json",
+					"jsonFile" : "target-SIP_autogen-Debug-3cb40ca6eb02e7386c47.json",
 					"name" : "SIP_autogen",
 					"projectIndex" : 0
 				},
@@ -69,7 +69,7 @@
 	"paths" : 
 	{
 		"build" : "/home/quang/Projects/SIP/build-SIP-Desktop-Debug",
-		"source" : "/home/quang/Projects/SIP"
+		"source" : "/home/quang/Projects/SIP_addServer"
 	},
 	"version" : 
 	{

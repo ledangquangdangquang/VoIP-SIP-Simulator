@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/local/bin/cmake --regenerate-during-build -S/home/quang/Projects/SIP -B/home/quang/Projects/SIP/build-SIP-Desktop-Debug
+  command = /usr/local/bin/cmake --regenerate-during-build -S/home/quang/Projects/SIP_addServer -B/home/quang/Projects/SIP/build-SIP-Desktop-Debug
   description = Re-running CMake...
   generator = 1
 
