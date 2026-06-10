@@ -43,3 +43,7 @@ sudo asterisk -rvvv
 ```
 pjsip show endpoints
 ```
+
+## Demo
+
+<video src="Demo/sip.mp4" controls width="100%"></video>
