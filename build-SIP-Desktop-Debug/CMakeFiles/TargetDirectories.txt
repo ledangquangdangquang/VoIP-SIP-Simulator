@@ -1,9 +1,0 @@
-/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/SIP.dir
-/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/edit_cache.dir
-/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/rebuild_cache.dir
-/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/list_install_components.dir
-/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/install.dir
-/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/install/local.dir
-/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/install/strip.dir
-/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/SIP_autogen_timestamp_deps.dir
-/home/quang/Projects/SIP/build-SIP-Desktop-Debug/CMakeFiles/SIP_autogen.dir
