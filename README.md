@@ -11,8 +11,9 @@ sudo nano /etc/asterisk/pjsip.conf
 ## Develop
 ### Ubuntu
 **1. Import `.ova` file into Virtualbox**
-[Download .ova here](google.com)
-password: 102112
+
+- [Download .ova here](google.com)
+- password: 102112
 
 **2. Open Qt -> Open project -> `~/Projects/SIP_addServer` -> Select `CMakeLists.txt`**
 
