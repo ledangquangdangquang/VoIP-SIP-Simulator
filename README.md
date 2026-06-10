@@ -45,4 +45,4 @@ pjsip show endpoints
 ```
 
 ## Demo
-![Demo App](./Demo/sip.gif)
+![Demo App](Demo/sip.gif)
