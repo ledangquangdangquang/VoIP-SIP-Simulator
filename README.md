@@ -16,9 +16,9 @@ password: 102112
 
 **2. Open Qt -> Open project -> `~/Projects/SIP_addServer` -> Select `CMakeLists.txt`**
 
-**3. Replace your ip  `mainwindow.cpp` file**
-- To show your ip 
-```
+**3. Replace your ip into `mainwindow.cpp` file**
+- To show your ip:
+```Bash
 hostname -I
 ```
 
@@ -37,8 +37,9 @@ Domain / SIP Server: <your-ip>:5060
 ---
 
 ## Asterisk CLI:
-Bash
-
+```Bash
 sudo asterisk -rvvv
-
+```
+```
 pjsip show endpoints
+```
