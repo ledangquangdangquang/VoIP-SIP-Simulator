@@ -43,6 +43,18 @@ sudo asterisk -rvvv
 ```
 pjsip show endpoints
 ```
+---
+
+## Install Wireshark Ubuntu
+```
+sudo apt install wireshark
+```
+```
+sudo usermod -aG wireshark $USER
+```
+```
+sudo chmod +x /usr/bin/dumpcap
+```
 
 ## Demo
 ![Demo App](Demo/sip.gif)
