@@ -6,20 +6,68 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QMetaObject>
+#include <QNetworkInterface>
 #include <QScrollBar>
 #include <QTextStream>
 #include <QThread>
+#include <QUdpSocket>
 
 using namespace pj;
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::MainWindow), networkStatsTimer(this)
+    : QMainWindow(parent), ui(new Ui::MainWindow), localIpTimer(this),
+      networkStatsTimer(this)
 {
     ui->setupUi(this);
+    localIpTimer.setInterval(2000);
+    connect(&localIpTimer, &QTimer::timeout, this, &MainWindow::updateLocalIp);
+    updateLocalIp();
+    localIpTimer.start();
     networkStatsTimer.setInterval(1000);
     connect(&networkStatsTimer, &QTimer::timeout, this, &MainWindow::updateNetworkStats);
     statusBar()->showMessage("Dashboard sẵn sàng");
     initPjsip();
+}
+
+void MainWindow::updateLocalIp() {
+    QHostAddress localAddress;
+
+    // A connected UDP socket reveals the address selected by the current
+    // default route without sending any packet.
+    QUdpSocket routeProbe;
+    routeProbe.connectToHost(QHostAddress("8.8.8.8"), 53);
+    if (routeProbe.waitForConnected(100)) {
+        localAddress = routeProbe.localAddress();
+    }
+
+    // Fall back to the first active non-loopback IPv4 interface when there is
+    // no default route (for example, on an isolated SIP lab network).
+    if (localAddress.isNull() || localAddress.isLoopback()) {
+        const auto interfaces = QNetworkInterface::allInterfaces();
+        for (const QNetworkInterface &networkInterface : interfaces) {
+            const auto flags = networkInterface.flags();
+            if (!flags.testFlag(QNetworkInterface::IsUp)
+                || !flags.testFlag(QNetworkInterface::IsRunning)
+                || flags.testFlag(QNetworkInterface::IsLoopBack)) {
+                continue;
+            }
+
+            for (const QNetworkAddressEntry &entry : networkInterface.addressEntries()) {
+                if (entry.ip().protocol() == QAbstractSocket::IPv4Protocol) {
+                    localAddress = entry.ip();
+                    break;
+                }
+            }
+            if (!localAddress.isNull()) break;
+        }
+    }
+
+    const QString displayAddress = localAddress.isNull()
+        ? QStringLiteral("Không có kết nối mạng")
+        : QStringLiteral("%1:5061").arg(localAddress.toString());
+    if (ui->lblIP->text() != displayAddress) {
+        ui->lblIP->setText(displayAddress);
+    }
 }
 
 void MainWindow::startNetworkStats() {
@@ -230,22 +278,14 @@ void MainWindow::initPjsip() {
         // 2. Tạo Transport cổng mạng (Ứng dụng chiếm cổng 5061, nhường 5060 cho Server Asterisk)
         TransportConfig t_cfg;
         t_cfg.port = 5061;
-        TransportId tid = ep.transportCreate(PJSIP_TRANSPORT_UDP, t_cfg);
+        ep.transportCreate(PJSIP_TRANSPORT_UDP, t_cfg);
 
         // 3. Khởi động thư viện lõi
         ep.libStart();
         qDebug() << "Lõi PJSIP của Client đã bật trên cổng 5061 mạng thật!";
         appendLog("SIP", "PJSIP endpoint đã khởi động qua UDP cổng 5061");
 
-        // 4. [SỬA LỖI TẠI ĐÂY]: Lấy thông tin địa chỉ string trực tiếp từ localName của PJSUA2
-        TransportInfo t_info = ep.transportGetInfo(tid);
-        QString localIpPort = QString::fromStdString(t_info.localName); // localName bản chất đã là chuỗi "IP:Port"
-
-        if (ui->lblIP) {
-            ui->lblIP->setText(localIpPort);
-        }
-
-        // 5. Cấu hình gửi lệnh Đăng ký tài khoản 1001 lên tổng đài Asterisk
+        // 4. Cấu hình gửi lệnh Đăng ký tài khoản 1001 lên tổng đài Asterisk
         AccountConfig acfg;
         acfg.idUri = "sip:1001@192.168.1.8";                  // Địa chỉ IP máy ảo Ubuntu hiện tại
         acfg.regConfig.registrarUri = "sip:192.168.1.8:5060";     // Cổng 5060 của Asterisk chạy ngầm

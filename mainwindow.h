@@ -46,6 +46,7 @@ private slots:
     void on_chkSip_toggled(bool checked);
     void on_chkRtp_toggled(bool checked);
     void on_chkError_toggled(bool checked);
+    void updateLocalIp();
     void updateNetworkStats();
 
 private:
@@ -59,6 +60,7 @@ private:
     MyAccount* account = nullptr;
     MyCall* currentCall = nullptr;
     QVector<LogEntry> logEntries;
+    QTimer localIpTimer;
     QTimer networkStatsTimer;
     QElapsedTimer statsSampleTimer;
     quint64 previousTxBytes = 0;
