@@ -4,70 +4,47 @@
 #include "ui_mainwindow.h"
 #include <QFile>
 #include <QFileDialog>
+#include <QHostAddress>
 #include <QMessageBox>
 #include <QMetaObject>
-#include <QNetworkInterface>
+#include <QProcess>
+#include <QRegularExpression>
 #include <QScrollBar>
 #include <QTextStream>
 #include <QThread>
-#include <QUdpSocket>
 
 using namespace pj;
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::MainWindow), localIpTimer(this),
-      networkStatsTimer(this)
+    : QMainWindow(parent), ui(new Ui::MainWindow), networkStatsTimer(this)
 {
     ui->setupUi(this);
-    localIpTimer.setInterval(2000);
-    connect(&localIpTimer, &QTimer::timeout, this, &MainWindow::updateLocalIp);
-    updateLocalIp();
-    localIpTimer.start();
     networkStatsTimer.setInterval(1000);
     connect(&networkStatsTimer, &QTimer::timeout, this, &MainWindow::updateNetworkStats);
     statusBar()->showMessage("Dashboard sẵn sàng");
     initPjsip();
 }
 
-void MainWindow::updateLocalIp() {
-    QHostAddress localAddress;
-
-    // A connected UDP socket reveals the address selected by the current
-    // default route without sending any packet.
-    QUdpSocket routeProbe;
-    routeProbe.connectToHost(QHostAddress("8.8.8.8"), 53);
-    if (routeProbe.waitForConnected(100)) {
-        localAddress = routeProbe.localAddress();
+QString MainWindow::localIpFromHostname() const {
+    QProcess process;
+    process.start(QStringLiteral("hostname"), {QStringLiteral("-I")});
+    if (!process.waitForFinished(1000)
+        || process.exitStatus() != QProcess::NormalExit
+        || process.exitCode() != 0) {
+        return {};
     }
 
-    // Fall back to the first active non-loopback IPv4 interface when there is
-    // no default route (for example, on an isolated SIP lab network).
-    if (localAddress.isNull() || localAddress.isLoopback()) {
-        const auto interfaces = QNetworkInterface::allInterfaces();
-        for (const QNetworkInterface &networkInterface : interfaces) {
-            const auto flags = networkInterface.flags();
-            if (!flags.testFlag(QNetworkInterface::IsUp)
-                || !flags.testFlag(QNetworkInterface::IsRunning)
-                || flags.testFlag(QNetworkInterface::IsLoopBack)) {
-                continue;
-            }
-
-            for (const QNetworkAddressEntry &entry : networkInterface.addressEntries()) {
-                if (entry.ip().protocol() == QAbstractSocket::IPv4Protocol) {
-                    localAddress = entry.ip();
-                    break;
-                }
-            }
-            if (!localAddress.isNull()) break;
+    const QStringList addresses = QString::fromLocal8Bit(process.readAllStandardOutput())
+                                      .split(QRegularExpression(QStringLiteral("\\s+")),
+                                             Qt::SkipEmptyParts);
+    for (const QString &address : addresses) {
+        const QHostAddress candidate(address);
+        if (candidate.protocol() == QAbstractSocket::IPv4Protocol
+            && !candidate.isLoopback()) {
+            return candidate.toString();
         }
     }
-
-    const QString displayAddress = localAddress.isNull()
-        ? QStringLiteral("Không có kết nối mạng")
-        : QStringLiteral("%1:5061").arg(localAddress.toString());
-    if (ui->lblIP->text() != displayAddress) {
-        ui->lblIP->setText(displayAddress);
-    }
+    return {};
 }
 
 void MainWindow::startNetworkStats() {
@@ -267,6 +244,19 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::initPjsip() {
+    const QString localIp = localIpFromHostname();
+    ui->lblIP->setText(localIp.isEmpty()
+                           ? QStringLiteral("Không tìm thấy địa chỉ IP")
+                           : QStringLiteral("%1:5061").arg(localIp));
+    if (localIp.isEmpty()) {
+        ui->lblServer->setText(QStringLiteral("Chưa xác định"));
+        appendLog("ERROR", "Không thể lấy IPv4 từ lệnh hostname -I");
+        return;
+    }
+
+    sipServerAddress = QStringLiteral("%1:5060").arg(localIp);
+    ui->lblServer->setText(sipServerAddress);
+
     try {
         // 1. Tạo lõi thực thi PJSIP Endpoint
         ep.libCreate();
@@ -278,6 +268,9 @@ void MainWindow::initPjsip() {
         // 2. Tạo Transport cổng mạng (Ứng dụng chiếm cổng 5061, nhường 5060 cho Server Asterisk)
         TransportConfig t_cfg;
         t_cfg.port = 5061;
+        if (!localIp.isEmpty()) {
+            t_cfg.boundAddress = localIp.toStdString();
+        }
         ep.transportCreate(PJSIP_TRANSPORT_UDP, t_cfg);
 
         // 3. Khởi động thư viện lõi
@@ -287,8 +280,10 @@ void MainWindow::initPjsip() {
 
         // 4. Cấu hình gửi lệnh Đăng ký tài khoản 1001 lên tổng đài Asterisk
         AccountConfig acfg;
-        acfg.idUri = "sip:1001@192.168.1.8";                  // Địa chỉ IP máy ảo Ubuntu hiện tại
-        acfg.regConfig.registrarUri = "sip:192.168.1.8:5060";     // Cổng 5060 của Asterisk chạy ngầm
+        acfg.idUri = QStringLiteral("sip:1001@%1").arg(localIp).toStdString();
+        acfg.regConfig.registrarUri = QStringLiteral("sip:%1")
+                                           .arg(sipServerAddress)
+                                           .toStdString();
 
         // Xác thực MD5 Khớp cấu hình Realm="asterisk" của tổng đài
         AuthCredInfo cred("digest", "asterisk", "1001", 0, "123456");
@@ -297,7 +292,8 @@ void MainWindow::initPjsip() {
         // Tạo thực thể tài khoản kết nối ngầm
         account = new MyAccount(this);
         account->create(acfg);
-        appendLog("SIP", "Đang đăng ký extension 1001 với 192.168.1.8:5060");
+        appendLog("SIP", QStringLiteral("Đang đăng ký extension 1001 với %1")
+                             .arg(sipServerAddress));
         appendSequenceEvent("1001", "Asterisk", "REGISTER", "Request");
 
     } catch (Error& err) {
@@ -322,9 +318,10 @@ void MainWindow::on_btnCall_clicked() {
         CallOpParam prm(true); // Tự động kích hoạt loa và mic mạng thật (RTP Audio)
 
         // Khi bấm gọi, lệnh INVITE gửi thẳng lên Asterisk (cổng 5060)
-        currentCall->makeCall("sip:1002@192.168.1.8:5060", prm);
+        const QString targetUri = QStringLiteral("sip:1002@%1").arg(sipServerAddress);
+        currentCall->makeCall(targetUri.toStdString(), prm);
         qDebug() << "Đang bắn lệnh INVITE lên Server Asterisk để tìm số 1002...";
-        appendLog("SIP", "Đã gửi INVITE tới sip:1002@192.168.1.8:5060");
+        appendLog("SIP", QStringLiteral("Đã gửi INVITE tới %1").arg(targetUri));
         appendSequenceEvent("1001", "Asterisk", "INVITE sip:1002", "Request");
     } catch (Error& err) {
         qDebug() << "Lỗi gọi đi:" << err.info().c_str();

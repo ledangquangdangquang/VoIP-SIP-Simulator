@@ -64,7 +64,7 @@ QStatusBar { background: #e2e8f0; color: #64748b; }</string>
        <item row="0" column="0"><widget class="QLabel" name="labelExtension"><property name="text"><string>Extension</string></property><property name="class" stdset="0"><string>fieldLabel</string></property></widget></item>
        <item row="0" column="1"><widget class="QLabel" name="lblExtension"><property name="text"><string>1001</string></property></widget></item>
        <item row="0" column="2"><widget class="QLabel" name="labelServer"><property name="text"><string>SIP server</string></property><property name="class" stdset="0"><string>fieldLabel</string></property></widget></item>
-       <item row="0" column="3"><widget class="QLabel" name="lblServer"><property name="text"><string>192.168.1.8:5060</string></property></widget></item>
+       <item row="0" column="3"><widget class="QLabel" name="lblServer"><property name="text"><string>Đang khởi tạo...</string></property></widget></item>
        <item row="0" column="4"><widget class="QLabel" name="lblStatus"><property name="text"><string>ĐANG KẾT NỐI</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
        <item row="1" column="0"><widget class="QLabel" name="labelLocal"><property name="text"><string>Local endpoint</string></property><property name="class" stdset="0"><string>fieldLabel</string></property></widget></item>
        <item row="1" column="1"><widget class="QLabel" name="lblIP"><property name="text"><string>Đang khởi tạo...</string></property></widget></item>
