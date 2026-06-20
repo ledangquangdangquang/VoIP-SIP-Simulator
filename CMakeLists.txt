@@ -20,6 +20,8 @@ set(PROJECT_SOURCES
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
+    sipsequencewidget.cpp
+    sipsequencewidget.h
 )
 
 # 3. Tạo Target thực thi (Executable) dựa trên phiên bản Qt bạn đang dùng
@@ -38,7 +40,10 @@ endif()
 
 # 4. KẾT NỐI TỚI THƯ VIỆN PJSIP TỰ COMPILE BẰNG TAY (Đã đồng bộ sang target "SIP")
 # Trỏ trực tiếp tới thư mục /usr/local (Nơi lệnh 'sudo make install' của PJSIP cài vào)
-target_include_directories(SIP PRIVATE /usr/local/include)
+target_include_directories(SIP PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    /usr/local/include
+)
 target_link_directories(SIP PRIVATE /usr/local/lib)
 # Liên kết toàn bộ module mạng của Qt và lõi VoIP PJSIP vào target "SIP"
 # Liên kết toàn bộ module mạng của Qt và lõi VoIP PJSIP vào target "SIP"
