@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "networkstatswidget.h"
 #include "sipsequencewidget.h"
 #include "ui_mainwindow.h"
 #include <QFile>
@@ -12,11 +13,76 @@
 using namespace pj;
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::MainWindow)
+    : QMainWindow(parent), ui(new Ui::MainWindow), networkStatsTimer(this)
 {
     ui->setupUi(this);
+    networkStatsTimer.setInterval(1000);
+    connect(&networkStatsTimer, &QTimer::timeout, this, &MainWindow::updateNetworkStats);
     statusBar()->showMessage("Dashboard sẵn sàng");
     initPjsip();
+}
+
+void MainWindow::startNetworkStats() {
+    if (QThread::currentThread() != thread()) {
+        QMetaObject::invokeMethod(this, [this]() { startNetworkStats(); }, Qt::QueuedConnection);
+        return;
+    }
+    if (shuttingDown) return;
+
+    previousTxBytes = 0;
+    previousRxBytes = 0;
+    statsSampleTimer.restart();
+    ui->networkStats->resetStats();
+    networkStatsTimer.start();
+    updateNetworkStats();
+}
+
+void MainWindow::updateNetworkStats() {
+    if (!currentCall || !currentCall->isActive()) return;
+
+    try {
+        const CallInfo callInfo = currentCall->getInfo();
+        for (const CallMediaInfo &mediaInfo : callInfo.media) {
+            if (mediaInfo.type != PJMEDIA_TYPE_AUDIO
+                || mediaInfo.status != PJSUA_CALL_MEDIA_ACTIVE) {
+                continue;
+            }
+
+            const StreamStat stats = currentCall->getStreamStat(mediaInfo.index);
+            const StreamInfo streamInfo = currentCall->getStreamInfo(mediaInfo.index);
+            const quint64 txBytes = stats.rtcp.txStat.bytes;
+            const quint64 rxBytes = stats.rtcp.rxStat.bytes;
+            const qint64 elapsedMs = qMax<qint64>(1, statsSampleTimer.restart());
+
+            NetworkStatsSample sample;
+            if (previousTxBytes > 0 && txBytes >= previousTxBytes) {
+                sample.uploadKbps = (txBytes - previousTxBytes) * 8.0 / elapsedMs;
+            }
+            if (previousRxBytes > 0 && rxBytes >= previousRxBytes) {
+                sample.downloadKbps = (rxBytes - previousRxBytes) * 8.0 / elapsedMs;
+            }
+            previousTxBytes = txBytes;
+            previousRxBytes = rxBytes;
+
+            sample.txPackets = stats.rtcp.txStat.pkt;
+            sample.rxPackets = stats.rtcp.rxStat.pkt;
+            const quint64 expectedRx = stats.rtcp.rxStat.pkt + stats.rtcp.rxStat.loss;
+            if (expectedRx > 0) {
+                sample.packetLossPercent = stats.rtcp.rxStat.loss * 100.0 / expectedRx;
+            }
+            sample.jitterMs = stats.rtcp.rxStat.jitterUsec.mean / 1000.0;
+            sample.rttMs = stats.rtcp.rttUsec.mean / 1000.0;
+            sample.codec = QString::fromStdString(streamInfo.codecName);
+            const long duration = callInfo.connectDuration.sec;
+            sample.duration = QString("%1:%2")
+                                  .arg(duration / 60, 2, 10, QLatin1Char('0'))
+                                  .arg(duration % 60, 2, 10, QLatin1Char('0'));
+            ui->networkStats->updateStats(sample);
+            return;
+        }
+    } catch (Error &err) {
+        qDebug() << "Không thể đọc RTP statistics:" << err.info().c_str();
+    }
 }
 
 void MainWindow::appendLog(const QString &category, const QString &message) {
@@ -102,7 +168,11 @@ void MainWindow::releaseCall(MyCall *call) {
         return;
     }
 
-    if (currentCall == call) currentCall = nullptr;
+    if (currentCall == call) {
+        networkStatsTimer.stop();
+        ui->networkStats->setInactive();
+        currentCall = nullptr;
+    }
     call->detachWindow();
     delete call;
 }
@@ -349,6 +419,7 @@ void MyCall::onCallState(OnCallStateParam &prm) {
         wasConfirmed = true;
         qDebug() << ">>> ĐÃ THÔNG CUỘC GỌI VỚI MÁY 1002 QUA SERVER ASTERISK!";
         if (mainWindow) {
+            mainWindow->startNetworkStats();
             mainWindow->appendLog("SIP", "Cuộc gọi đã kết nối");
             if (incoming) {
                 mainWindow->appendSequenceEvent("Asterisk", "1001", "ACK", "Request");

@@ -7,13 +7,13 @@
 namespace {
 constexpr int HeaderHeight = 62;
 constexpr int RowHeight = 42;
-constexpr int SideMargin = 105;
+constexpr int MinimumSideMargin = 78;
 }
 
 SipSequenceWidget::SipSequenceWidget(QWidget *parent)
     : QWidget(parent)
 {
-    setMinimumWidth(620);
+    setMinimumWidth(460);
     setMinimumHeight(HeaderHeight + RowHeight * 3);
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::MinimumExpanding);
 }
@@ -40,8 +40,9 @@ QSize SipSequenceWidget::sizeHint() const {
 }
 
 int SipSequenceWidget::endpointX(const QString &endpoint) const {
-    if (endpoint == "1001") return SideMargin;
-    if (endpoint == "1002") return width() - SideMargin;
+    const int sideMargin = qMax(MinimumSideMargin, width() / 7);
+    if (endpoint == "1001") return sideMargin;
+    if (endpoint == "1002") return width() - sideMargin;
     return width() / 2;
 }
 
@@ -66,7 +67,8 @@ void SipSequenceWidget::paintEvent(QPaintEvent *event) {
 
     for (int index = 0; index < endpoints.size(); ++index) {
         const int x = positions[index];
-        const QRectF badge(x - 61, 8, 122, 42);
+        const qreal badgeWidth = qMin(122, width() / 4);
+        const QRectF badge(x - badgeWidth / 2, 8, badgeWidth, 42);
         painter.setPen(QPen(QColor("#cbd5e1"), 1));
         painter.setBrush(Qt::white);
         painter.drawRoundedRect(badge, 8, 8);
@@ -76,14 +78,16 @@ void SipSequenceWidget::paintEvent(QPaintEvent *event) {
         endpointFont.setPointSize(10);
         painter.setFont(endpointFont);
         painter.setPen(QColor("#0f172a"));
-        painter.drawText(QRectF(x - 58, 11, 116, 18), Qt::AlignCenter, endpoints[index]);
+        painter.drawText(QRectF(x - badgeWidth / 2 + 3, 11, badgeWidth - 6, 18),
+                         Qt::AlignCenter, endpoints[index]);
 
         QFont subtitleFont = painter.font();
         subtitleFont.setBold(false);
         subtitleFont.setPointSize(8);
         painter.setFont(subtitleFont);
         painter.setPen(QColor("#64748b"));
-        painter.drawText(QRectF(x - 58, 28, 116, 16), Qt::AlignCenter, subtitles[index]);
+        painter.drawText(QRectF(x - badgeWidth / 2 + 3, 28, badgeWidth - 6, 16),
+                         Qt::AlignCenter, subtitles[index]);
 
         QPen lifelinePen(QColor("#cbd5e1"), 1, Qt::DashLine);
         painter.setPen(lifelinePen);

@@ -7,7 +7,9 @@
 #include <QTextEdit>
 #include <QApplication>
 #include <QPointer>
+#include <QElapsedTimer>
 #include <QString>
+#include <QTimer>
 #include <QVector>
 #include <pjsua2.hpp>
 
@@ -33,6 +35,7 @@ public:
     void updateRegistrationState(bool active, int statusCode);
     void adoptIncomingCall(MyCall *call);
     void releaseCall(MyCall *call);
+    void startNetworkStats();
 
 private slots:
     void on_btnCall_clicked();
@@ -43,6 +46,7 @@ private slots:
     void on_chkSip_toggled(bool checked);
     void on_chkRtp_toggled(bool checked);
     void on_chkError_toggled(bool checked);
+    void updateNetworkStats();
 
 private:
     struct LogEntry {
@@ -55,6 +59,10 @@ private:
     MyAccount* account = nullptr;
     MyCall* currentCall = nullptr;
     QVector<LogEntry> logEntries;
+    QTimer networkStatsTimer;
+    QElapsedTimer statsSampleTimer;
+    quint64 previousTxBytes = 0;
+    quint64 previousRxBytes = 0;
     bool shuttingDown = false;
 
     void initPjsip();

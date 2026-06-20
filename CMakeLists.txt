@@ -20,6 +20,8 @@ set(PROJECT_SOURCES
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
+    networkstatswidget.cpp
+    networkstatswidget.h
     sipsequencewidget.cpp
     sipsequencewidget.h
 )

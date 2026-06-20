@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-This repository contains a small Qt Widgets SIP client written in C++17. `main.cpp` starts the application; `mainwindow.h` and `mainwindow.cpp` contain the UI controller and PJSUA2 account/call callbacks. Edit the form in `mainwindow.ui`, preferably with Qt Designer. Build configuration lives in `CMakeLists.txt`, and `Demo/sip.gif` illustrates the application in `README.md`.
+This repository contains a small Qt Widgets SIP client written in C++17. `main.cpp` starts the application; `mainwindow.h` and `mainwindow.cpp` contain the UI controller and PJSUA2 account/call callbacks. Edit the form in `mainwindow.ui`, preferably with Qt Designer. Build configuration lives in `CMakeLists.txt`; project tracking lives under `docs/`, and screenshots live under `assets/`.
 
 Treat `build-SIP-Desktop-Debug/` as generated output; do not hand-edit it. New code may remain at the root while the project is small; if it grows, group classes under `src/` and mirror them under `tests/`.
 

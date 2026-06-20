@@ -6,13 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>780</height>
+    <width>1400</width>
+    <height>900</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>760</width>
+    <width>1100</width>
     <height>620</height>
    </size>
   </property>
@@ -81,9 +81,22 @@ QStatusBar { background: #e2e8f0; color: #64748b; }</string>
      </layout>
     </item>
     <item>
-     <widget class="QSplitter" name="debugSplitter">
-      <property name="orientation"><enum>Qt::Vertical</enum></property>
-      <property name="childrenCollapsible"><bool>false</bool></property>
+     <layout class="QGridLayout" name="dashboardGrid" columnstretch="1,1" rowstretch="2,1">
+      <property name="horizontalSpacing"><number>14</number></property>
+      <property name="verticalSpacing"><number>14</number></property>
+      <item row="0" column="0">
+      <widget class="QGroupBox" name="grpNetworkStats">
+       <property name="title"><string>Network Statistics Dashboard</string></property>
+       <layout class="QVBoxLayout" name="networkStatsLayout">
+        <property name="leftMargin"><number>8</number></property>
+        <property name="topMargin"><number>8</number></property>
+        <property name="rightMargin"><number>8</number></property>
+        <property name="bottomMargin"><number>8</number></property>
+        <item><widget class="NetworkStatsWidget" name="networkStats"/></item>
+       </layout>
+      </widget>
+      </item>
+      <item row="0" column="1">
       <widget class="QGroupBox" name="grpSequence">
        <property name="title"><string>SIP Packet Visualizer</string></property>
        <layout class="QVBoxLayout" name="sequenceLayout">
@@ -117,6 +130,8 @@ QStatusBar { background: #e2e8f0; color: #64748b; }</string>
         </item>
        </layout>
       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
       <widget class="QGroupBox" name="grpPacketLog">
       <property name="title"><string>Luồng sự kiện</string></property>
       <layout class="QVBoxLayout" name="logLayout">
@@ -139,7 +154,8 @@ QStatusBar { background: #e2e8f0; color: #64748b; }</string>
        </item>
       </layout>
       </widget>
-     </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
@@ -148,6 +164,11 @@ QStatusBar { background: #e2e8f0; color: #64748b; }</string>
   </widget>
  </widget>
  <customwidgets>
+ <customwidget>
+   <class>NetworkStatsWidget</class>
+   <extends>QWidget</extends>
+   <header>networkstatswidget.h</header>
+  </customwidget>
   <customwidget>
    <class>SipSequenceWidget</class>
    <extends>QWidget</extends>
