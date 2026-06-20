@@ -22,9 +22,7 @@ A Qt Widgets desktop client for learning and debugging SIP call flows with Aster
 ├── mainwindow.{h,cpp,ui}            SIP callbacks and main dashboard
 ├── sipsequencewidget.{h,cpp}        SIP sequence diagram
 ├── networkstatswidget.{h,cpp}       RTP/RTCP statistics dashboard
-├── assets/                          Screenshots and media
-├── docs/PROGRESS.md                 Completed work and known limitations
-└── docs/ROADMAP.md                  Planned improvements
+└── assets/                          Screenshots and media
 ```
 
 ## Requirements
@@ -116,9 +114,3 @@ pjsip show contacts
 - `QObject ... different thread` indicates that a PJSIP callback is modifying a Qt widget directly. Route updates through a queued GUI-thread method.
 - `481 Call/Transaction Does Not Exist` indicates a SIP dialog mismatch; inspect Call-ID, tags, CSeq, and the Asterisk dial plan.
 - If the application launches old code, clear the Qt Creator CMake configuration and select a build directory under this repository.
-
-## Project Tracking
-
-- [Completed work and current status](docs/PROGRESS.md)
-- [Planned improvements](docs/ROADMAP.md)
-- [Contributor guidelines](AGENTS.md)

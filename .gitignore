@@ -1,0 +1,45 @@
+# CMake and build output
+/build/
+/build-*/
+/cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+build.ninja
+.ninja_deps
+.ninja_log
+*_autogen/
+
+# Qt Creator and IDE settings
+CMakeLists.txt.user*
+*.user
+.qtc/
+.qt/
+.vscode/
+.idea/
+
+# Compiler and runtime output
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+*.log
+
+# Local AI assistant files
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+/docs/
+/doc/
+/.agents/
+/.codex/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
