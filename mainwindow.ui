@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>SIP Debug Dashboard</string>
+   <string>SIP DASHBOARD</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QMainWindow, QWidget#centralwidget { background: #f3f5f8; color: #1f2937; }
@@ -25,7 +25,7 @@ QLabel#lblTitle { font-size: 24px; font-weight: 700; color: #111827; }
 QLabel#lblSubtitle { color: #64748b; }
 QGroupBox { background: white; border: 1px solid #dbe2ea; border-radius: 10px; margin-top: 12px; padding: 14px; font-weight: 600; }
 QGroupBox::title { subcontrol-origin: margin; left: 14px; padding: 0 5px; color: #334155; }
-QLabel[class="fieldLabel"] { color: #64748b; }
+QLabel[class=&quot;fieldLabel&quot;] { color: #64748b; }
 QLabel#lblStatus { background: #fff7ed; color: #c2410c; border-radius: 9px; padding: 5px 10px; font-weight: 700; }
 QPushButton { min-height: 34px; padding: 0 18px; border: none; border-radius: 7px; font-weight: 600; }
 QPushButton#btnCall { background: #16a34a; color: white; }
@@ -40,131 +40,413 @@ QStatusBar { background: #e2e8f0; color: #64748b; }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="mainLayout">
-    <property name="leftMargin"><number>24</number></property>
-    <property name="topMargin"><number>20</number></property>
-    <property name="rightMargin"><number>24</number></property>
-    <property name="bottomMargin"><number>20</number></property>
-    <property name="spacing"><number>14</number></property>
+    <property name="spacing">
+     <number>14</number>
+    </property>
+    <property name="leftMargin">
+     <number>24</number>
+    </property>
+    <property name="topMargin">
+     <number>20</number>
+    </property>
+    <property name="rightMargin">
+     <number>24</number>
+    </property>
+    <property name="bottomMargin">
+     <number>20</number>
+    </property>
     <item>
      <widget class="QLabel" name="lblTitle">
-      <property name="text"><string>SIP Debug Dashboard</string></property>
+      <property name="text">
+       <string>SIP DASHBOARD</string>
+      </property>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="lblSubtitle">
-      <property name="text"><string>Giám sát đăng ký, cuộc gọi và sự kiện mạng theo thời gian thực</string></property>
+      <property name="text">
+       <string>Giám sát đăng ký, cuộc gọi và sự kiện mạng theo thời gian thực</string>
+      </property>
      </widget>
     </item>
     <item>
      <widget class="QGroupBox" name="grpAccount">
-      <property name="title"><string>Thông tin tài khoản</string></property>
+      <property name="title">
+       <string>Thông tin tài khoản</string>
+      </property>
       <layout class="QGridLayout" name="accountLayout">
-       <property name="horizontalSpacing"><number>14</number></property>
-       <property name="verticalSpacing"><number>10</number></property>
-       <item row="0" column="0"><widget class="QLabel" name="labelExtension"><property name="text"><string>Extension</string></property><property name="class" stdset="0"><string>fieldLabel</string></property></widget></item>
-       <item row="0" column="1"><widget class="QLabel" name="lblExtension"><property name="text"><string>1001</string></property></widget></item>
-       <item row="0" column="2"><widget class="QLabel" name="labelServer"><property name="text"><string>SIP server</string></property><property name="class" stdset="0"><string>fieldLabel</string></property></widget></item>
-       <item row="0" column="3"><widget class="QLabel" name="lblServer"><property name="text"><string>Đang khởi tạo...</string></property></widget></item>
-       <item row="0" column="4"><widget class="QLabel" name="lblStatus"><property name="text"><string>ĐANG KẾT NỐI</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
-       <item row="1" column="0"><widget class="QLabel" name="labelLocal"><property name="text"><string>Local endpoint</string></property><property name="class" stdset="0"><string>fieldLabel</string></property></widget></item>
-       <item row="1" column="1"><widget class="QLabel" name="lblIP"><property name="text"><string>Đang khởi tạo...</string></property></widget></item>
-       <item row="1" column="2"><widget class="QLabel" name="labelTransport"><property name="text"><string>Transport</string></property><property name="class" stdset="0"><string>fieldLabel</string></property></widget></item>
-       <item row="1" column="3"><widget class="QLabel" name="lblTransport"><property name="text"><string>UDP / 5061</string></property></widget></item>
+       <property name="horizontalSpacing">
+        <number>14</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>10</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelExtension">
+         <property name="text">
+          <string>Extension</string>
+         </property>
+         <property name="class" stdset="0">
+          <string>fieldLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="lblExtension">
+         <property name="text">
+          <string>1001</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="labelServer">
+         <property name="text">
+          <string>SIP server</string>
+         </property>
+         <property name="class" stdset="0">
+          <string>fieldLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLabel" name="lblServer">
+         <property name="text">
+          <string>Đang khởi tạo...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QLabel" name="lblStatus">
+         <property name="text">
+          <string>ĐANG KẾT NỐI</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelLocal">
+         <property name="text">
+          <string>Local endpoint</string>
+         </property>
+         <property name="class" stdset="0">
+          <string>fieldLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="lblIP">
+         <property name="text">
+          <string>Đang khởi tạo...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="labelTransport">
+         <property name="text">
+          <string>Transport</string>
+         </property>
+         <property name="class" stdset="0">
+          <string>fieldLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QLabel" name="lblTransport">
+         <property name="text">
+          <string>UDP / 5061</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
     <item>
      <layout class="QHBoxLayout" name="callControlsLayout">
-      <item><widget class="QPushButton" name="btnCall"><property name="text"><string>Gọi 1002</string></property></widget></item>
-      <item><widget class="QPushButton" name="btnHangup"><property name="text"><string>Kết thúc cuộc gọi</string></property></widget></item>
-      <item><spacer name="callControlSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+      <item>
+       <widget class="QPushButton" name="btnCall">
+        <property name="text">
+         <string>Gọi 1002</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnHangup">
+        <property name="text">
+         <string>Kết thúc cuộc gọi</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="callControlSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
      </layout>
     </item>
     <item>
-     <layout class="QGridLayout" name="dashboardGrid" columnstretch="1,1" rowstretch="2,1">
-      <property name="horizontalSpacing"><number>14</number></property>
-      <property name="verticalSpacing"><number>14</number></property>
+     <layout class="QGridLayout" name="dashboardGrid" rowstretch="2,1" columnstretch="1,1">
+      <property name="spacing">
+       <number>14</number>
+      </property>
       <item row="0" column="0">
-      <widget class="QGroupBox" name="grpNetworkStats">
-       <property name="title"><string>Network Statistics Dashboard</string></property>
-       <layout class="QVBoxLayout" name="networkStatsLayout">
-        <property name="leftMargin"><number>8</number></property>
-        <property name="topMargin"><number>8</number></property>
-        <property name="rightMargin"><number>8</number></property>
-        <property name="bottomMargin"><number>8</number></property>
-        <item><widget class="NetworkStatsWidget" name="networkStats"/></item>
-       </layout>
-      </widget>
+       <widget class="QGroupBox" name="grpNetworkStats">
+        <property name="title">
+         <string>Network Statistics Dashboard</string>
+        </property>
+        <layout class="QVBoxLayout" name="networkStatsLayout">
+         <property name="leftMargin">
+          <number>8</number>
+         </property>
+         <property name="topMargin">
+          <number>8</number>
+         </property>
+         <property name="rightMargin">
+          <number>8</number>
+         </property>
+         <property name="bottomMargin">
+          <number>8</number>
+         </property>
+         <item>
+          <widget class="NetworkStatsWidget" name="networkStats" native="true"/>
+         </item>
+        </layout>
+       </widget>
       </item>
       <item row="0" column="1">
-      <widget class="QGroupBox" name="grpSequence">
-       <property name="title"><string>SIP Packet Visualizer</string></property>
-       <layout class="QVBoxLayout" name="sequenceLayout">
-        <item>
-         <layout class="QHBoxLayout" name="sequenceToolbarLayout">
-          <item><widget class="QLabel" name="lblSequenceHint"><property name="text"><string>Request</string></property><property name="styleSheet"><string notr="true">color: #2563eb; font-weight: 600;</string></property></widget></item>
-          <item><widget class="QLabel" name="lblResponseHint"><property name="text"><string>Response</string></property><property name="styleSheet"><string notr="true">color: #16a34a; font-weight: 600;</string></property></widget></item>
-          <item><widget class="QLabel" name="lblChallengeHint"><property name="text"><string>Auth challenge</string></property><property name="styleSheet"><string notr="true">color: #d97706; font-weight: 600;</string></property></widget></item>
-          <item><widget class="QLabel" name="lblMediaHint"><property name="text"><string>RTP media</string></property><property name="styleSheet"><string notr="true">color: #7c3aed; font-weight: 600;</string></property></widget></item>
-          <item><widget class="QLabel" name="lblErrorHint"><property name="text"><string>Error</string></property><property name="styleSheet"><string notr="true">color: #dc2626; font-weight: 600;</string></property></widget></item>
-          <item><spacer name="sequenceToolbarSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
-          <item><widget class="QPushButton" name="btnClearSequence"><property name="text"><string>Xóa sơ đồ</string></property></widget></item>
-         </layout>
-        </item>
-        <item>
-         <widget class="QScrollArea" name="sequenceScrollArea">
-          <property name="minimumSize"><size><width>0</width><height>220</height></size></property>
-          <property name="widgetResizable"><bool>true</bool></property>
-          <property name="frameShape"><enum>QFrame::NoFrame</enum></property>
-          <widget class="QWidget" name="sequenceScrollContents">
-           <property name="geometry"><rect><x>0</x><y>0</y><width>912</width><height>220</height></rect></property>
-           <layout class="QVBoxLayout" name="sequenceScrollLayout">
-            <property name="leftMargin"><number>0</number></property>
-            <property name="topMargin"><number>0</number></property>
-            <property name="rightMargin"><number>0</number></property>
-            <property name="bottomMargin"><number>0</number></property>
-            <item><widget class="SipSequenceWidget" name="sipSequence"/></item>
-           </layout>
+       <widget class="QGroupBox" name="grpSequence">
+        <property name="title">
+         <string>SIP Packet Visualizer</string>
+        </property>
+        <layout class="QVBoxLayout" name="sequenceLayout">
+         <item>
+          <layout class="QHBoxLayout" name="sequenceToolbarLayout">
+           <item>
+            <widget class="QLabel" name="lblSequenceHint">
+             <property name="styleSheet">
+              <string notr="true">color: #2563eb; font-weight: 600;</string>
+             </property>
+             <property name="text">
+              <string>Request</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lblResponseHint">
+             <property name="styleSheet">
+              <string notr="true">color: #16a34a; font-weight: 600;</string>
+             </property>
+             <property name="text">
+              <string>Response</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lblChallengeHint">
+             <property name="styleSheet">
+              <string notr="true">color: #d97706; font-weight: 600;</string>
+             </property>
+             <property name="text">
+              <string>Auth challenge</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lblMediaHint">
+             <property name="styleSheet">
+              <string notr="true">color: #7c3aed; font-weight: 600;</string>
+             </property>
+             <property name="text">
+              <string>RTP media</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lblErrorHint">
+             <property name="styleSheet">
+              <string notr="true">color: #dc2626; font-weight: 600;</string>
+             </property>
+             <property name="text">
+              <string>Error</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="sequenceToolbarSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnClearSequence">
+             <property name="text">
+              <string>Xóa sơ đồ</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QScrollArea" name="sequenceScrollArea">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>220</height>
+            </size>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="sequenceScrollContents">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>620</width>
+              <height>277</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="sequenceScrollLayout">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="SipSequenceWidget" name="sipSequence" native="true"/>
+             </item>
+            </layout>
+           </widget>
           </widget>
-         </widget>
-        </item>
-       </layout>
-      </widget>
+         </item>
+        </layout>
+       </widget>
       </item>
       <item row="1" column="0" colspan="2">
-      <widget class="QGroupBox" name="grpPacketLog">
-      <property name="title"><string>Luồng sự kiện</string></property>
-      <layout class="QVBoxLayout" name="logLayout">
-       <item>
-        <layout class="QHBoxLayout" name="logToolbarLayout">
-         <item><widget class="QLabel" name="labelFilter"><property name="text"><string>Hiển thị:</string></property></widget></item>
-         <item><widget class="QCheckBox" name="chkSip"><property name="text"><string>SIP</string></property><property name="checked"><bool>true</bool></property></widget></item>
-         <item><widget class="QCheckBox" name="chkRtp"><property name="text"><string>RTP</string></property><property name="checked"><bool>true</bool></property></widget></item>
-         <item><widget class="QCheckBox" name="chkError"><property name="text"><string>Lỗi</string></property><property name="checked"><bool>true</bool></property></widget></item>
-         <item><spacer name="logToolbarSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
-         <item><widget class="QPushButton" name="btnClearLog"><property name="text"><string>Xóa log</string></property></widget></item>
-         <item><widget class="QPushButton" name="btnExportLog"><property name="text"><string>Xuất log</string></property></widget></item>
+       <widget class="QGroupBox" name="grpPacketLog">
+        <property name="title">
+         <string>Luồng sự kiện</string>
+        </property>
+        <layout class="QVBoxLayout" name="logLayout">
+         <item>
+          <layout class="QHBoxLayout" name="logToolbarLayout">
+           <item>
+            <widget class="QLabel" name="labelFilter">
+             <property name="text">
+              <string>Hiển thị:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="chkSip">
+             <property name="text">
+              <string>SIP</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="chkRtp">
+             <property name="text">
+              <string>RTP</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="chkError">
+             <property name="text">
+              <string>Lỗi</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="logToolbarSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnClearLog">
+             <property name="text">
+              <string>Xóa log</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnExportLog">
+             <property name="text">
+              <string>Xuất log</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTextEdit" name="txtPacketLog">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="placeholderText">
+            <string>Các sự kiện SIP, RTP và lỗi sẽ xuất hiện tại đây...</string>
+           </property>
+          </widget>
+         </item>
         </layout>
-       </item>
-       <item>
-        <widget class="QTextEdit" name="txtPacketLog">
-         <property name="readOnly"><bool>true</bool></property>
-         <property name="placeholderText"><string>Các sự kiện SIP, RTP và lỗi sẽ xuất hiện tại đây...</string></property>
-        </widget>
-       </item>
-      </layout>
-      </widget>
+       </widget>
       </item>
      </layout>
     </item>
    </layout>
   </widget>
   <widget class="QStatusBar" name="statusbar">
-   <property name="sizeGripEnabled"><bool>true</bool></property>
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
   </widget>
  </widget>
  <customwidgets>
- <customwidget>
+  <customwidget>
    <class>NetworkStatsWidget</class>
    <extends>QWidget</extends>
    <header>networkstatswidget.h</header>
