@@ -32,7 +32,8 @@ CMakeLists.txt.user*
 AGENTS.md
 CLAUDE.md
 GEMINI.md
-/docs/
+/docs/*
+!/docs/TAI_LIEU_HOC_TAP.md
 /doc/
 /.agents/
 /.codex/

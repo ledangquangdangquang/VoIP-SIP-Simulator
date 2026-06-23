@@ -1,5 +1,8 @@
 # VoIP SIP Simulator
 
+> Tài liệu tiếng Việt để học code, kiến thức SIP/RTP và chuẩn bị câu hỏi bảo vệ:
+> [docs/TAI_LIEU_HOC_TAP.md](docs/TAI_LIEU_HOC_TAP.md)
+
 A Qt Widgets desktop client for learning and debugging SIP call flows with Asterisk and PJSUA2. The application registers extension `1001`, calls a second endpoint such as Linphone extension `1002`, visualizes SIP messages, and displays live RTP/RTCP network statistics.
 
 ![SIP Debug Dashboard](assets/sip-dashboard.png)
