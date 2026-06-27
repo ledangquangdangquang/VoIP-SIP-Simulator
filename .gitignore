@@ -34,6 +34,7 @@ CLAUDE.md
 GEMINI.md
 /docs/*
 !/docs/TAI_LIEU_HOC_TAP.md
+!/docs/Báo_cáo_mạng_máy_tính.pdf
 /doc/
 /.agents/
 /.codex/
